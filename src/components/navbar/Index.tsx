@@ -30,7 +30,7 @@ const Navbar = ({
   //ACTUAL RETURN
   return (
     <nav className={`${navBg} py-6 fixed top-0 z-30 w-full`}>
-      <div className={`${flexBetween} w-5/6 gap-16 mx-auto`}>
+      <div className={`${flexBetween} w-[95%] gap-16 mx-auto`}>
         {/* LEFT SIDE */}
         <div>
           <img src={Logo} alt="logo" />

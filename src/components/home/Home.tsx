@@ -1,5 +1,4 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
-import React from "react";
 import homeImg from "@/assets/HomePageGraphic.png";
 import homeText from "@/assets/HomePageText.png";
 import JoinButton from "@/components/shared/JoinButton";
@@ -21,7 +20,7 @@ const Home = ({ setSelectedSection }: Props) => {
     <section id="home" className="h-auto bg-gray-20">
       <div className={`wrapper ${wrapperClasses}`}>
         {/* LEFT SIDE */}
-        <div className="z-100 xs:flex xs:flex-col xs:text-center xs:items-center md:items-start md:text-start">
+        <div className="z-100 xs:w-5/6 md:w-full xs:m-auto xs:flex xs:flex-col xs:text-center xs:items-center md:items-start md:text-start">
           {/* image */}
           <div className="img-div relative z-10">
             <div className="before:absolute flex xs:justify-center md:justify-start before:z-[-1] md:before:content-evolvetext before:-top-20 before:-left-10">
@@ -48,12 +47,12 @@ const Home = ({ setSelectedSection }: Props) => {
           </div>
         </div>
         {/* RIGHT SIDE */}
-        <div>
+        <div className="xs:flex xs:justify-center md:static">
           <img src={homeImg} alt="home-img" />
         </div>
       </div>
       {/* SPONSORS */}
-      <div className="sponsors flex xs:flex-col sm:justify-center sm:flex-row xs:px-10 md:px-20 bg-primary-100 sm:gap-16 md:justify-between py-10 xs:gap-10">
+      <div className="sponsors flex xs:flex-col sm:justify-center sm:flex-row xs:px-10 md:px-20 bg-primary-100 sm:gap-16 md:justify-around py-10 xs:gap-10">
         <img src={SponsorForbes} alt="sponsor-forbes" className="self-center" />
         <img
           src={SponsorFortune}
