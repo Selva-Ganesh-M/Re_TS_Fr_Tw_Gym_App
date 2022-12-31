@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar/Index";
 import { useEffect } from "react";
 import { Sections } from "./shared/types";
 import Home from "./components/home/Home";
+import Benefits from "./components/Benefits/Benefits";
 
 function App() {
   // STATE DECLARATION
@@ -33,6 +34,7 @@ function App() {
         setSelectedSection={setSelectedSection}
       />
       <Home setSelectedSection={setSelectedSection} />
+      <Benefits setSelectedSection={setSelectedSection} />
     </div>
   );
 }

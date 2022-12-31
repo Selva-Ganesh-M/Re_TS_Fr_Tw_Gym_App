@@ -4,3 +4,9 @@ export enum Sections {
   Benefits = "benefits",
   OurClasses = "ourclasses",
 }
+
+export type BenefitType = {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+};
