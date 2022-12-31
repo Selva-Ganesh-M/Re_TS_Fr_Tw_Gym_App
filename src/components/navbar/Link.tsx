@@ -1,6 +1,5 @@
 import { Sections } from "@/shared/types";
-import React from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link as ScrollableLink } from "react-scroll";
 
 type Props = {
   section: string;
@@ -8,21 +7,29 @@ type Props = {
   setSelectedSection: (arg0: Sections) => void;
 };
 
-const Link = ({ section, selectedSection, setSelectedSection }: Props) => {
+const Link = ({
+  section,
+  selectedSection,
+  setSelectedSection,
+}: Props): JSX.Element => {
   const sectionLowerC = section.toLowerCase().replace(/ /g, "") as Sections;
 
   return (
-    <a
+    <ScrollableLink
+      to={`${sectionLowerC}`}
+      duration={700}
+      offset={-88}
+      smooth={true}
       className={`${
         selectedSection === sectionLowerC ? "text-primary-500" : ""
       } hover:text-primary-300 `}
-      href={`#${section}`}
+      href={`#${sectionLowerC}`}
       onClick={() => {
         setSelectedSection(sectionLowerC);
       }}
     >
       {section}
-    </a>
+    </ScrollableLink>
   );
 };
 

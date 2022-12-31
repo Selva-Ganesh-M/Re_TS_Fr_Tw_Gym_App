@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Sections } from "./shared/types";
 import Home from "./components/home/Home";
 import Benefits from "./components/Benefits/Benefits";
+import OurClasses from "./components/ourclasses/OurClasses";
 
 function App() {
   // STATE DECLARATION
@@ -35,6 +36,7 @@ function App() {
       />
       <Home setSelectedSection={setSelectedSection} />
       <Benefits setSelectedSection={setSelectedSection} />
+      <OurClasses setSelectedSection={setSelectedSection} />
     </div>
   );
 }

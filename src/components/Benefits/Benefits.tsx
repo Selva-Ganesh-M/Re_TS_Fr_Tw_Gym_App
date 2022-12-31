@@ -37,7 +37,11 @@ type Props = {
 
 const Benefits = ({ setSelectedSection }: Props) => {
   return (
-    <section id="benefits" className="mt-10 p-10 xs:flex xs:flex-col gap-24">
+    <motion.section
+      onViewportEnter={() => setSelectedSection(Sections.Benefits)}
+      id="benefits"
+      className="mt-10 p-10 xs:flex xs:flex-col gap-24"
+    >
       {/* TOP WRAPPER */}
       <div className="top-wrapper text-center">
         <div className="header mb-3">
@@ -154,7 +158,7 @@ const Benefits = ({ setSelectedSection }: Props) => {
           </motion.div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

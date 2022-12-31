@@ -10,3 +10,9 @@ export type BenefitType = {
   title: string;
   description: string;
 };
+
+export type DataType = {
+  name: string;
+  description?: string;
+  image: string;
+};

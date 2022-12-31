@@ -14,10 +14,11 @@ type Props = {
 const Home = ({ setSelectedSection }: Props) => {
   const isAboveMobileScreens = useMediaQuery("(min-width: 1060px)");
   const wrapperClasses = isAboveMobileScreens
-    ? "pt-36 px-6 md:flex gap-16 md:pb-0"
+    ? "p-[120px] px-6 md:flex gap-16 md:pb-0"
     : "pt-32 px-6 flex-col items-center";
   return (
     <section id="home" className="min-h-full bg-gray-20 ">
+      {/* MAIN */}
       <div className={`wrapper ${wrapperClasses}`}>
         {/* LEFT SIDE */}
         <motion.div

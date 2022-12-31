@@ -25,11 +25,11 @@ const Navbar = ({
 
   //   CUSTOM STYLES
   const flexBetween = "flex items-center justify-between";
-  const navBg = !isTopOfThePage ? "bg-primary-100" : "";
+  const navBg = !isTopOfThePage ? "bg-primary-100" : "bg-gray-20";
 
   //ACTUAL RETURN
   return (
-    <nav className={`${navBg} py-6 fixed top-0 z-30 w-full`}>
+    <nav className={`${navBg} py-6 sticky top-0 z-30 w-full`}>
       <div className={`${flexBetween} w-[95%] gap-16 mx-auto`}>
         {/* LEFT SIDE */}
         <div>
@@ -45,7 +45,7 @@ const Navbar = ({
                 setSelectedSection={setSelectedSection}
               />
               <Link
-                section="Benfits"
+                section="Benefits"
                 selectedSection={selectedSection}
                 setSelectedSection={setSelectedSection}
               />
