@@ -34,10 +34,28 @@ const Home = ({ setSelectedSection }: Props) => {
         >
           {/* image */}
           <div className="img-div relative z-10 xs:mb-6">
-            <div className="before:absolute flex xs:justify-center md:justify-start before:z-[-1] md:before:content-evolvetext before:-top-20 before:-left-10">
+            <div
+              className="
+            // before
+            before:absolute before:z-[-1] md:before:content-evolvetext before:-top-20 before:-left-10
+            // very small
+            flex justify-center 
+            // small
+            xs:justify-center 
+            // mediun
+            md:justify-start "
+            >
               <img
                 src={homeText}
-                className="xs:ml-16 md:ml-auto"
+                className="
+                // very small
+                ml-10
+                mb-6
+                // small
+                xs:ml-16
+                xs:mb-0
+                // medium
+                md:ml-auto"
                 alt="home-text-img"
               />
             </div>

@@ -4,6 +4,7 @@ import { Link as ScrollableLink } from "react-scroll";
 type Props = {
   section: string;
   selectedSection: Sections;
+  setIsMobileMenuToggled: (arg: Boolean) => void;
   setSelectedSection: (arg0: Sections) => void;
 };
 
@@ -11,6 +12,7 @@ const Link = ({
   section,
   selectedSection,
   setSelectedSection,
+  setIsMobileMenuToggled,
 }: Props): JSX.Element => {
   const sectionLowerC = section.toLowerCase().replace(/ /g, "") as Sections;
 
@@ -25,6 +27,7 @@ const Link = ({
       } hover:text-primary-300 `}
       href={`#${sectionLowerC}`}
       onClick={() => {
+        setIsMobileMenuToggled(false);
         setSelectedSection(sectionLowerC);
       }}
     >

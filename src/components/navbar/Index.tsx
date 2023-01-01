@@ -5,6 +5,7 @@ import { Sections } from "@/shared/types";
 import Link from "./Link";
 import JoinButton from "@/components/shared/JoinButton";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 type Props = {
   isTopOfThePage: Boolean;
@@ -18,6 +19,7 @@ const Navbar = ({
   setSelectedSection,
 }: Props) => {
   //DECLARATIONS
+  const navNames: string[] = ["Home", "Benefits", "Our Classes", "Contact Us"];
   const [isMobileMenuToggled, setIsMobileMenuToggled] =
     useState<Boolean>(false);
   // return whether we're above the medium screen size
@@ -39,26 +41,15 @@ const Navbar = ({
         {isAboveMediumScreens ? (
           <div className={`${flexBetween} w-full`}>
             <div className={`${flexBetween} gap-8 text-sm`}>
-              <Link
-                section="Home"
-                selectedSection={selectedSection}
-                setSelectedSection={setSelectedSection}
-              />
-              <Link
-                section="Benefits"
-                selectedSection={selectedSection}
-                setSelectedSection={setSelectedSection}
-              />
-              <Link
-                section="Our Classes"
-                selectedSection={selectedSection}
-                setSelectedSection={setSelectedSection}
-              />
-              <Link
-                section="Contact Us"
-                selectedSection={selectedSection}
-                setSelectedSection={setSelectedSection}
-              />
+              {navNames.map((name, index) => (
+                <Link
+                  key={`${index}-${name}`}
+                  section={name}
+                  selectedSection={selectedSection}
+                  setSelectedSection={setSelectedSection}
+                  setIsMobileMenuToggled={setIsMobileMenuToggled}
+                />
+              ))}
             </div>
             <div className={`${flexBetween} gap-8`}>
               <p>Sign In</p>
@@ -81,12 +72,10 @@ const Navbar = ({
 
       {/* SMALL SCREENS NAVIGATION MENU MODAL */}
       {!isAboveMediumScreens && isMobileMenuToggled && (
-        <div
-          // onBlur={() => {
-          //   console.log("blur");
-
-          //   setIsMobileMenuToggled(false);
-          // }}
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: 100, opacity: 0 }}
           className="fixed z-100 top-0 px-3 pt-6 right-0 bg-secondary-500 w-[300px] h-full"
         >
           {/* CLOSE BUTTON (X) */}
@@ -100,28 +89,17 @@ const Navbar = ({
           </div>
           {/* MENU ITEMS */}
           <div className="ml-[23%] flex flex-col text-2xl gap-3 basis-1/3">
-            <Link
-              section="Home"
-              selectedSection={selectedSection}
-              setSelectedSection={setSelectedSection}
-            />
-            <Link
-              section="Benefits"
-              selectedSection={selectedSection}
-              setSelectedSection={setSelectedSection}
-            />
-            <Link
-              section="Our Classes"
-              selectedSection={selectedSection}
-              setSelectedSection={setSelectedSection}
-            />
-            <Link
-              section="Contact Us"
-              selectedSection={selectedSection}
-              setSelectedSection={setSelectedSection}
-            />
+            {navNames.map((name, index) => (
+              <Link
+                section={name}
+                key={`${index}-${name}`}
+                selectedSection={selectedSection}
+                setSelectedSection={setSelectedSection}
+                setIsMobileMenuToggled={setIsMobileMenuToggled}
+              />
+            ))}
           </div>
-        </div>
+        </motion.div>
       )}
     </nav>
   );

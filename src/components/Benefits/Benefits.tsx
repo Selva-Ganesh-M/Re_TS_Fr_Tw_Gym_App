@@ -17,7 +17,7 @@ const Benefits = ({ setSelectedSection }: Props) => {
       id="benefits"
       className="mt-10 p-10 xs:flex xs:flex-col gap-24"
     >
-      {/* TOP WRAPPER */}
+      {/* TOP-CARDS */}
       <div className="top-wrapper text-center">
         <div className="header mb-3">
           <Heading> MORE THAN JUST GYM.</Heading>
@@ -29,11 +29,13 @@ const Benefits = ({ setSelectedSection }: Props) => {
         </div>
         {/* Benefits wrapper */}
         <motion.div
-          className="flex md:justify-between xs:flex-col md:flex-row"
+          className="flex
+          flex-col
+           md:justify-between xs:flex-col md:flex-row"
           initial="hidden"
           whileInView={"visible"}
           viewport={{
-            // once: true,
+            once: true,
             amount: 0.5,
           }}
           variants={{
@@ -53,7 +55,7 @@ const Benefits = ({ setSelectedSection }: Props) => {
         </motion.div>
       </div>
 
-      {/* BOTTOM WRAPPER */}
+      {/* BOTTOM-DESCRIPTION */}
       <div className="Bottom-wrapper xs:flex xs:flex-col xs:gap-16 md:gap-10 md:flex-row md:items-center">
         {/* LEFT */}
         <div className="basis-[100%] xs:m-auto">

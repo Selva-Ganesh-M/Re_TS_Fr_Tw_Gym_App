@@ -67,9 +67,7 @@ const OurClasses = ({ setSelectedSection }: Props) => {
           }}
         >
           {data.map((item) => (
-            <>
-              <Class data={item} key={`${item.name}`} />
-            </>
+            <Class data={item} key={`${item.name}`} />
           ))}
         </Carousel>
       </motion.div>

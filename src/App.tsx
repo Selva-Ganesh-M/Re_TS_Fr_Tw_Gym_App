@@ -5,6 +5,7 @@ import { Sections } from "./shared/types";
 import Home from "./components/home/Home";
 import Benefits from "./components/Benefits/Benefits";
 import OurClasses from "./components/ourclasses/OurClasses";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 function App() {
   // STATE DECLARATION
@@ -37,6 +38,7 @@ function App() {
       <Home setSelectedSection={setSelectedSection} />
       <Benefits setSelectedSection={setSelectedSection} />
       <OurClasses setSelectedSection={setSelectedSection} />
+      <ContactUs setSelectedSection={setSelectedSection} />
     </div>
   );
 }
