@@ -81,7 +81,14 @@ const Navbar = ({
 
       {/* SMALL SCREENS NAVIGATION MENU MODAL */}
       {!isAboveMediumScreens && isMobileMenuToggled && (
-        <div className="fixed z-100 top-0 px-3 pt-6 right-0 bg-secondary-500 w-[300px] h-full">
+        <div
+          // onBlur={() => {
+          //   console.log("blur");
+
+          //   setIsMobileMenuToggled(false);
+          // }}
+          className="fixed z-100 top-0 px-3 pt-6 right-0 bg-secondary-500 w-[300px] h-full"
+        >
           {/* CLOSE BUTTON (X) */}
           <div className="flex justify-end">
             <button
@@ -99,7 +106,7 @@ const Navbar = ({
               setSelectedSection={setSelectedSection}
             />
             <Link
-              section="Benfits"
+              section="Benefits"
               selectedSection={selectedSection}
               setSelectedSection={setSelectedSection}
             />

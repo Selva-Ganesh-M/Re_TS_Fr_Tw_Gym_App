@@ -15,7 +15,7 @@ const Home = ({ setSelectedSection }: Props) => {
   const isAboveMobileScreens = useMediaQuery("(min-width: 1060px)");
   const wrapperClasses = isAboveMobileScreens
     ? "p-[120px] px-6 md:flex gap-16 md:pb-0"
-    : "pt-32 px-6 flex-col items-center";
+    : "pt-1 px-6 flex-col items-center";
   return (
     <section id="home" className="min-h-full bg-gray-20 ">
       {/* MAIN */}

@@ -4,7 +4,12 @@ import image3 from "@/assets/image3.png";
 import image4 from "@/assets/image4.png";
 import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
-import { DataType } from "./types";
+import {
+  AcademicCapIcon,
+  HomeModernIcon,
+  UserGroupIcon,
+} from "@heroicons/react/24/solid";
+import { BenefitType, DataType } from "./types";
 
 export const data: Array<DataType> = [
   {
@@ -38,5 +43,26 @@ export const data: Array<DataType> = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: image6,
+  },
+];
+
+export const benefits: Array<BenefitType> = [
+  {
+    icon: <HomeModernIcon className="h-6 w-6" />,
+    title: "State of the Art Facilities",
+    description:
+      "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
+  },
+  {
+    icon: <UserGroupIcon className="h-6 w-6" />,
+    title: "100's of Diverse Classes",
+    description:
+      "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
+  },
+  {
+    icon: <AcademicCapIcon className="h-6 w-6" />,
+    title: "Expert and Pro Trainers",
+    description:
+      "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
   },
 ];

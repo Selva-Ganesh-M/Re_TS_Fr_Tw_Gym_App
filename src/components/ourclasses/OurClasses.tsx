@@ -44,8 +44,8 @@ const OurClasses = ({ setSelectedSection }: Props) => {
       >
         <Carousel
           autoPlay={true}
-          autoPlaySpeed={5000}
-          transitionDuration={500}
+          autoPlaySpeed={2500}
+          transitionDuration={1000}
           infinite={true}
           responsive={{
             large: {
@@ -67,10 +67,11 @@ const OurClasses = ({ setSelectedSection }: Props) => {
           }}
         >
           {data.map((item) => (
-            <Class data={item} key={`${item.name}`} />
+            <>
+              <Class data={item} key={`${item.name}`} />
+            </>
           ))}
         </Carousel>
-        ;
       </motion.div>
     </motion.section>
   );
