@@ -92,7 +92,7 @@ const ContactUs = ({ setSelectedSection }: Props) => {
           <form
             target="_blank"
             onSubmit={handleSubmit}
-            action={"https://formsubmit.co/428ed2787f23228ca2d4c40fb8c10a61"}
+            action={"https://formsubmit.co/selvadev2k@gmail.com"}
             method="POST"
             className="flex flex-col justify-center gap-4"
           >
