@@ -3,7 +3,7 @@ import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import { useForm } from "react-hook-form";
 import { Sections } from "@/shared/types";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 
 type Props = {
   setSelectedSection: (value: Sections) => void;
@@ -11,11 +11,18 @@ type Props = {
 
 const ContactUs = ({ setSelectedSection }: Props) => {
   // DECLARATIONS
-  const { register, trigger, formState } = useForm();
+  const [thanks, setThanks] = useState<Boolean>(false);
+  const { register, trigger, formState, reset } = useForm();
   const { errors } = formState;
   const handleSubmit = async (e: React.SyntheticEvent) => {
     const isValid = await trigger();
-    if (!isValid) e.preventDefault();
+    if (!isValid) {
+      e.preventDefault();
+      return;
+    }
+    reset();
+    setThanks(true);
+    setTimeout(() => setThanks(false), 500);
   };
 
   //   STYLES
@@ -154,6 +161,11 @@ const ContactUs = ({ setSelectedSection }: Props) => {
             <button className="bg-secondary-500 rounded-lg py-3 px-10 hover:bg-primary-500">
               SUBMIT
             </button>
+            {thanks ? (
+              <div className="border-2 p-3 text-center">Response Submitted</div>
+            ) : (
+              ""
+            )}
           </form>
         </div>
         {/* IMAGE */}
