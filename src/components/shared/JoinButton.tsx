@@ -1,5 +1,6 @@
 import { Sections } from "@/shared/types";
 import React from "react";
+import { Link } from "react-scroll";
 
 type Props = {
   children: React.ReactNode;
@@ -8,15 +9,18 @@ type Props = {
 
 const JoinButton = ({ children, setSelectedSection }: Props) => {
   return (
-    <a
+    <Link
       className="bg-secondary-400 hover:bg-primary-500 hover:text-white px-10 py-2 rounded-md"
-      href={`#${Sections.ContactUs}`}
+      to={`${Sections.ContactUs}`}
+      duration={700}
+      offset={-88}
+      smooth={true}
       onClick={() => {
         setSelectedSection(Sections.ContactUs);
       }}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 
