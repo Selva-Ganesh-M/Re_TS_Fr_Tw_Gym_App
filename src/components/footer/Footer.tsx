@@ -53,7 +53,7 @@ const Footer = (props: Props) => {
             x: 0,
           },
         }}
-        className="flex flex-col xs:flex-row gap-5 md:flex-row"
+        className="flex flex-col gap-5 sm:flex-row"
       >
         {/* part-2-1 */}
         <div className="basis-1/2">

@@ -31,7 +31,7 @@ function App() {
     };
   }, []);
   return (
-    <div className="ap h-auto">
+    <div id="app">
       <Navbar
         isTopOfThePage={isTopOfThePage}
         selectedSection={selectedSection}

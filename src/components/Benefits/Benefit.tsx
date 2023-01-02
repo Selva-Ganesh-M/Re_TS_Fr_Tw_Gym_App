@@ -10,7 +10,7 @@ const Benefit = ({ benefit, setSelectedSection }: Props) => {
   const { title, icon, description } = benefit;
   return (
     <motion.div
-      className=" text-center border-2 flex flex-col gap-5 py-6 px-4 rounded-md border-gray-100 mb-6 basis-[31%]"
+      className=" text-center justify-between border-2 flex flex-col gap-5 py-6 px-4 rounded-md border-gray-100 mb-6 basis-[31%]"
       viewport={{
         once: true,
         amount: 0.5,
