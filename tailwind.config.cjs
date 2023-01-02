@@ -31,9 +31,13 @@ module.exports = {
       },
     },
     screens: {
-      xs: "480px",
-      sm: "768px",
-      md: "1060px",
+      // xs: "480px",
+      // sm: "768px",
+      // md: "1060px",
+      xs: "350px",
+      sm: "480px",
+      md: "768px",
+      lg: "1025px",
     },
   },
 

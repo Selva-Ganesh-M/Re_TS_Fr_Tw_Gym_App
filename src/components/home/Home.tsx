@@ -12,7 +12,7 @@ type Props = {
 };
 
 const Home = ({ setSelectedSection }: Props) => {
-  const isAboveMobileScreens = useMediaQuery("(min-width: 1060px)");
+  const isAboveMobileScreens = useMediaQuery("(min-width: 768px)");
   const wrapperClasses = isAboveMobileScreens
     ? "p-[120px] px-6 md:flex gap-16 md:pb-0"
     : "pt-1 px-6 flex-col items-center";
@@ -22,7 +22,7 @@ const Home = ({ setSelectedSection }: Props) => {
       <div className={`wrapper ${wrapperClasses}`}>
         {/* LEFT SIDE */}
         <motion.div
-          className="z-100 xs:w-5/6 md:w-full text-center xs:m-auto xs:flex xs:flex-col xs:text-center xs:items-center md:items-start md:text-start"
+          className="z-100 xs:w-5/ md:w-full text-center xs:m-auto xs:flex xs:flex-col xs:text-center xs:items-center md:items-start md:text-start"
           initial={"hidden"}
           whileInView={"visible"}
           viewport={{ once: true, amount: 0.5 }}

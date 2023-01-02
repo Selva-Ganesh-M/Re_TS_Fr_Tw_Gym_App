@@ -23,7 +23,7 @@ const Navbar = ({
   const [isMobileMenuToggled, setIsMobileMenuToggled] =
     useState<Boolean>(false);
   // return whether we're above the medium screen size
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1024px)");
 
   //   CUSTOM STYLES
   const flexBetween = "flex items-center justify-between";

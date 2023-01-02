@@ -29,9 +29,9 @@ const ContactUs = ({ setSelectedSection }: Props) => {
     <motion.section
       onViewportEnter={() => setSelectedSection(Sections.ContactUs)}
       id="contactus"
-      className="
+      className={`
     // default
-    w-5/6 mx-auto pt-20 pb-16 min-h-[100vh]"
+    w-5/6 mx-auto pt-20 md:pb-32 mb-10 lg:pb-28 min-h-[100vh]`}
     >
       {/* HEADER */}
       <motion.div
@@ -49,7 +49,7 @@ const ContactUs = ({ setSelectedSection }: Props) => {
     // default
     w-full text-center mb-10
     // medium
-    md:w-3/5 md:text-start
+    lg:w-3/5 md:text-start
       "
       >
         <Heading>
@@ -159,14 +159,16 @@ const ContactUs = ({ setSelectedSection }: Props) => {
         {/* IMAGE */}
         <div className="relative">
           <div
-            className="
+            className={`
             // before
-            before:absolute
             md:before:content-evolvetext
+            before:absolute
             before:z-[-1]
             before:top-[350px]
+            lg:before:top-[400px]
             before:left-[-250px]
-            "
+            md:before:left-[-370px]
+            `}
           ></div>
           <img src={ContactUsPageGraphic} alt="contact-img" />
         </div>
