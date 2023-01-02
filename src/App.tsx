@@ -15,10 +15,11 @@ function App() {
   );
   const [isTopOfThePage, setIsTopOfThePage] = useState<Boolean>(true);
   useEffect(() => {
+    setSelectedSection(Sections.Home);
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfThePage(true);
-        setSelectedSection(Sections.Home);
+        // setSelectedSection(Sections.Home);
       }
       if (window.scrollY !== 0) {
         setIsTopOfThePage(false);

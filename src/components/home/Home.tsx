@@ -17,7 +17,12 @@ const Home = ({ setSelectedSection }: Props) => {
     ? "p-[120px] px-6 md:flex gap-16 md:pb-0"
     : "pt-1 px-6 flex-col items-center";
   return (
-    <section id="home" className="min-h-full bg-gray-20 ">
+    <motion.section
+      onViewportEnter={() => setSelectedSection(Sections.Home)}
+      id="home"
+      className="min-h-full
+      bg-gray-20"
+    >
       {/* MAIN */}
       <div className={`wrapper ${wrapperClasses}`}>
         {/* LEFT SIDE */}
@@ -118,7 +123,7 @@ const Home = ({ setSelectedSection }: Props) => {
       ) : (
         ""
       )}
-    </section>
+    </motion.section>
   );
 };
 

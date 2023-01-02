@@ -6,7 +6,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <section className=" p-16 bg-primary-300 flex flex-col gap-10 md:flex-row">
+    <section className=" p-16 bg-primary-300 flex flex-col justify-between gap-10 md:flex-row">
       {/* part-1 */}
       <motion.div
         initial="hidden"

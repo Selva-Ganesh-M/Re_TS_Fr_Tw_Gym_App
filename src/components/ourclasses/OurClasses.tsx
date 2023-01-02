@@ -34,7 +34,7 @@ const OurClasses = ({ setSelectedSection }: Props) => {
         whileInView={"visible"}
         viewport={{
           once: true,
-          amount: 0.5,
+          amount: 0.1,
         }}
         transition={{ duration: 0.5 }}
         variants={{
