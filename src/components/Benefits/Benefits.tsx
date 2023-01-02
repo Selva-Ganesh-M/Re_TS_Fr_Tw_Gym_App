@@ -11,9 +11,12 @@ type Props = {
 };
 
 const Benefits = ({ setSelectedSection }: Props) => {
+  const handleViewPortEnter = () => {
+    setSelectedSection(Sections.Benefits);
+  };
   return (
     <motion.section
-      onViewportEnter={() => setSelectedSection(Sections.Benefits)}
+      onViewportEnter={handleViewPortEnter}
       id="benefits"
       className="mt-10 p-10 xs:flex xs:flex-col gap-24"
     >

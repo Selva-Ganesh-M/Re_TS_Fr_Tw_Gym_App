@@ -98,7 +98,7 @@ const Home = ({ setSelectedSection }: Props) => {
       </div>
       {/* SPONSORS */}
       {isAboveMobileScreens ? (
-        <div className="sponsors flex xs:flex-col sm:justify-center sm:flex-row xs:px-10 md:px-20 bg-primary-100 sm:gap-16 md:justify-around py-10 xs:gap-10">
+        <div className="sponsors mb-5 flex xs:flex-col sm:justify-center sm:flex-row xs:px-10 md:px-20 bg-primary-100 sm:gap-16 md:justify-around py-10 xs:gap-10">
           <img
             src={SponsorForbes}
             alt="sponsor-forbes"

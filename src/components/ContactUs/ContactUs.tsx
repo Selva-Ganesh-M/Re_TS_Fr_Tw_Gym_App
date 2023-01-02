@@ -31,10 +31,20 @@ const ContactUs = ({ setSelectedSection }: Props) => {
       id="contactus"
       className="
     // default
-    w-5/6 mx-auto pt-20 pb-16"
+    w-5/6 mx-auto pt-20 pb-16 min-h-[100vh]"
     >
       {/* HEADER */}
-      <div
+      <motion.div
+        initial="hidden"
+        whileInView={"final"}
+        viewport={{
+          once: true,
+          amount: 0.5,
+        }}
+        variants={{
+          hidden: { x: -100, opacity: 0 },
+          final: { x: 0, opacity: 1 },
+        }}
         className="
     // default
     w-full text-center mb-10
@@ -50,9 +60,19 @@ const ContactUs = ({ setSelectedSection }: Props) => {
           sapien vel rhoncus. Placerat at in enim pellentesque. Nulla adipiscing
           leo egestas nisi elit risus sit. Nunc cursus sagittis.
         </p>
-      </div>
+      </motion.div>
       {/* FLEX BOX */}
-      <div
+      <motion.div
+        initial="hidden"
+        whileInView={"final"}
+        viewport={{
+          once: true,
+          amount: 0.25,
+        }}
+        variants={{
+          hidden: { y: 50, opacity: 0 },
+          final: { y: 0, opacity: 1 },
+        }}
         className="
         // default
         flex flex-col gap-10
@@ -144,13 +164,13 @@ const ContactUs = ({ setSelectedSection }: Props) => {
             before:absolute
             md:before:content-evolvetext
             before:z-[-1]
-            before:top-[320px]
-            before:left-[-200px]
+            before:top-[350px]
+            before:left-[-250px]
             "
           ></div>
           <img src={ContactUsPageGraphic} alt="contact-img" />
         </div>
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

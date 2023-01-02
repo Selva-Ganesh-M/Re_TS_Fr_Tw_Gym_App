@@ -16,7 +16,7 @@ const OurClasses = ({ setSelectedSection }: Props) => {
     <motion.section
       id="ourclasses"
       onViewportEnter={() => setSelectedSection(Sections.OurClasses)}
-      className="outclasses p-16 bg-primary-300 flex flex-col gap-4 "
+      className="outclasses md:min-h-[100vh] px-16 py-32 bg-primary-300 flex flex-col gap-4 "
     >
       {/* CONTENT SECTION */}
       <div className="text-center flex flex-col gap-4 items-center mb-4">

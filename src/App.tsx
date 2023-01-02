@@ -6,6 +6,7 @@ import Home from "./components/home/Home";
 import Benefits from "./components/Benefits/Benefits";
 import OurClasses from "./components/ourclasses/OurClasses";
 import ContactUs from "./components/ContactUs/ContactUs";
+import Footer from "./components/footer/Footer";
 
 function App() {
   // STATE DECLARATION
@@ -39,6 +40,7 @@ function App() {
       <Benefits setSelectedSection={setSelectedSection} />
       <OurClasses setSelectedSection={setSelectedSection} />
       <ContactUs setSelectedSection={setSelectedSection} />
+      <Footer />
     </div>
   );
 }
